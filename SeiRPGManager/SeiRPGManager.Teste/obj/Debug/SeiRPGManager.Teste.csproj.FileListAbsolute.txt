@@ -1,0 +1,17 @@
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.Teste.exe.config
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\obj\Debug\SeiRPGManager.Teste.csprojResolveAssemblyReference.cache
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\obj\Debug\SeiRPGManager.Teste.Form1.resources
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\obj\Debug\SeiRPGManager.Teste.Properties.Resources.resources
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\obj\Debug\SeiRPGManager.Teste.csproj.GenerateResource.Cache
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.Teste.exe
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.Teste.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.Entidades.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.Entidades.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\obj\Debug\SeiRPGManager.Teste.exe
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\obj\Debug\SeiRPGManager.Teste.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.DAL.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\EntityFramework.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.DAL.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\EntityFramework.xml
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.Negocio.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Teste\bin\Debug\SeiRPGManager.Negocio.pdb

@@ -1,0 +1,12 @@
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\obj\Debug\SeiRPGManager.DAL.csprojResolveAssemblyReference.cache
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\SeiRPGManager.DAL.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\SeiRPGManager.DAL.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\EntityFramework.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\SeiRPGManager.Entidades.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\SeiRPGManager.Entidades.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\EntityFramework.xml
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\obj\Debug\SeiRPGManager.DAL.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\obj\Debug\SeiRPGManager.DAL.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\SeiRPGManager.DAL.dll.config
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\SeiRPGManager.Negocio.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.DAL\bin\Debug\SeiRPGManager.Negocio.pdb

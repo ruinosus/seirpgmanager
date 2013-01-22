@@ -1,0 +1,5 @@
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Negocio\obj\Debug\SeiRPGManager.Negocio.csprojResolveAssemblyReference.cache
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Negocio\bin\Debug\SeiRPGManager.Negocio.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Negocio\bin\Debug\SeiRPGManager.Negocio.pdb
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Negocio\obj\Debug\SeiRPGManager.Negocio.dll
+E:\Projetos\seirpgmanager\trunk\SeiRPGManager\SeiRPGManager.Negocio\obj\Debug\SeiRPGManager.Negocio.pdb
