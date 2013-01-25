@@ -12,5 +12,7 @@ namespace SeiRPGManager.Modelos.Enum
 
     public enum SimNao
     {
+        Sim = 1,
+        Nao = 0
     }
 }
