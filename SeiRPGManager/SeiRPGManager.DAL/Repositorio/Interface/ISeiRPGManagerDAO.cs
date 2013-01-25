@@ -19,36 +19,15 @@ namespace SeiRPGManager.DAL.Repositorio.Interface
     public interface ISeiRPGManagerDAO<T>
         where T : Entidade
     {
-        /// <summary>
-        /// TODO: Atualizar Header
-        /// </summary>
-        /// <returns>Retorna uma lista IQuerable tipada da entidade pertinente</returns>
-        IQueryable<T> ObterTodos();
-
-        /// <summary>
-        /// TODO: Atualizar Header
-        /// </summary>
-        /// <param name="entidade">Entidade a ser persistida</param>
-        void InserirOuAtualizar(T entidade);
-
-        /// <summary>
-        /// TODO: Atualizar Header
-        /// </summary>
-        /// <param name="entidade">Entidade a ser atualizada</param>
-        void Atualizar(T entidade);
-
-        /// <summary>
-        /// TODO: Atualizar Header
-        /// </summary>
-        /// <param name="ids">arrays de códigos que devem ser excluídos da base</param>
-        /// <returns>Retorna true se bem-sucedido e false se mal-sucedido</returns>
-        bool Excluir(params long[] ids);
-
-        /// <summary>
-        /// TODO: Atualizar Header
-        /// </summary>
-        /// <param name="filtro">Filtro usando expressões lambda</param>
-        /// <returns>Retorna uma lista tipada da entidade pertinente</returns>
-        IQueryable<T> Pesquisar(Expression<Func<T, bool>> filtro);
+        List<T> ObterTodos<T>() where T : Entidade;        
+        void Atualizar<T>(T entidade) where T : Entidade;
+        void Inserir<T>(T entidade) where T : Entidade;
+        void Excluir<T>(T entidade) where T : Entidade;        
+        void Excluir(params long[] ids);
+        void Anexar<T>(T entidade) where T : Entidade;
+        IEnumerable<T> Pesquisar<T>() where T : Entidade;
+        IEnumerable<T> Pesquisar<T>(Func<T, bool> filtro) where T : Entidade;
+        T ObterUm<T>(Func<T, bool> filtro) where T : Entidade;
+        T ObterPrimeiro<T>(Func<T, bool> filtro) where T : Entidade;        
     }
 }

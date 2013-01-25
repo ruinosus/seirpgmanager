@@ -23,19 +23,13 @@ namespace SeiRPGManager.Teste
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //XmlDocument xml = new XmlDocument();
-            //FuncoesSeiRPG.AlterarAtributoXML("","", "");
-
             Raca r = new Raca();
 
             r.Descricao = "Descrição";
             r.Nome = "Nome";
 
-            //RacaDAO rDao = new RacaDAO();
-
-            //rDao.CriarFonteDeDados();
             SeiRPGManagerDAO<Raca> rDao = new SeiRPGManagerDAO<Raca>();
-            rDao.InserirOuAtualizar(r);
+            rDao.Inserir(r);
 
         }
     }

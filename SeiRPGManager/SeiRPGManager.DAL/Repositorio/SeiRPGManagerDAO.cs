@@ -8,137 +8,66 @@ namespace SeiRPGManager.DAL.Repositorio
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.Objects;
     using System.Linq;
     using System.Linq.Expressions;
-    using System.Reflection;
     using SeiRPGManager.Entidades.Modelo.ClassesBasicas;
     using SeiRPGManager.DAL.Repositorio.Interface;
-    using System.Data.Objects.DataClasses;
-    using SeiRPGManager.DAL.Repositorio;
     using Storytelling.Negocio.Excecoes;
-    using System.Data.Entity;
+    using System.Data.Objects;
+    using System.Data.Entity.Infrastructure;
 
     /// <summary>
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class SeiRPGManagerDAO<T> : ISeiRPGManagerDAO<T> where T : Entidade
+    public abstract class SeiRPGManagerDAO<T> : ISeiRPGManagerDAO<T> where T : Entidade
     {
-        internal SeiRPGManagerContexto context;
-        internal DbSet<T> dbSet;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        internal SeiRPGManagerContexto _contexto;
+        
         public SeiRPGManagerDAO(SeiRPGManagerContexto context)
         {
-            this.context = context;
-            this.dbSet = context.Set<T>();
-            //this.context.
+            this._contexto = context;            
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SeiRPGManagerDAO()
         {
-            this.context = new SeiRPGManagerContexto();
-            this.dbSet = context.Set<T>();
-            
+            this._contexto = new SeiRPGManagerContexto();            
         }
 
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    private PropertyInfo[] properties;
-
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    internal SeiRPGManagerDAO()
-        //    {
-        //        this.properties = typeof(T).GetProperties();
-        //    }
-
-
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    /// <returns>TODO: Update Header</returns>
-        //    public IQueryable<T> ObterTodos<T>()
-        //    {
-        //        using (var contexto = Contexto)
-        //        {
-        //            return contexto.CreateObjectSet<T>(); 
-        //        }
-        //    }
-
-
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    /// <param name="entidade"></param>
-        //    public void Inserir(T entidade)
-        //    {
-        //        contexto.ApplyCurrentValues<T>(entidade.GetType().Name, entidade); 
-        //    }
-
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    /// <param name="entidade"></param>
-        //    public void Atualizar(T entidade)
-        //    {
-        //        using (var contexto = Context)
-        //        {
-        //            contexto.ApplyCurrentValues<T>(entidade.GetType().Name, entidade);
-        //        }
-        //    }
-
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    /// <param name="ids"></param>
-        //    /// <returns></returns>
-        //    public virtual bool Excluir(params long[] ids)
-        //    {
-        //        using (var context = this.Context)
-        //        {
-        //            ObjectSet<T> objectSet = context.CreateObjectSet<T>();
-
-        //            foreach (var item in ids)
-        //            {
-        //                objectSet.DeleteObject(objectSet.Single(ent => ent.Id == item));
-        //            }
-
-        //            return SalvarContexto(context);
-        //        }
-        //    }
-
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    /// <param name="filtro"></param>
-        //    /// <returns></returns>
-        //    public IQueryable<T> Pesquisar(Expression<Func<T, bool>> filtro)
-        //    {
-        //        using (var contexto = Context)
-        //        {
-        //            return contexto.CreateObjectSet<T>().Where(filtro);
-        //        }
-        //    }
-
+        /// <summary>
+        /// TODO: Update Header
+        /// </summary>
+        /// <returns>TODO: Update Header</returns>
+        public List<T> ObterTodos<T>() where T : Entidade
+        {
+            using (var contexto = _contexto)
+            {
+                return contexto.Set<T>().ToList<T>(); 
+            }
+        }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
         /// <param name="contexto"></param>
         /// <returns></returns>
-        public bool SalvarContexto(ObjectContext contexto)
+        public bool SalvarContexto()
         {
             try
             {
-                bool retorno = false;
+                bool retorno = false;                
 
-                if (contexto.SaveChanges() == 1)
+                if (_contexto.SaveChanges() == 1)
                 {
                     retorno = true;
                 }
+
                 return retorno;
             }
             catch (UpdateException ex)
@@ -154,55 +83,152 @@ namespace SeiRPGManager.DAL.Repositorio
             }
         }
 
-        //    /// <summary>
-        //    /// TODO: Update Header
-        //    /// </summary>
-        //    /// <param name="context"></param>
-        //    /// <param name="nomeTipo"></param>
-        //    /// <param name="item"></param>
-        //    private static void Manter(ObjectContext context, string nomeTipo, Entidade item)
-        //    {
-        //        if (item.Id == 0)
-        //        {
-        //            context.AddObject(nomeTipo, item);
-        //        }
-        //        else
-        //        {
-        //            context.ApplyOriginalValues(nomeTipo, context.GetObjectByKey(context.CreateEntityKey(nomeTipo, item)));
-        //            context.ApplyCurrentValues(nomeTipo, item);
-        //        }
-        //    }
-        //}
-        public IQueryable<T> ObterTodos()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entidade"></param>
+        public void Atualizar<T>(T entidade) where T : Entidade
         {
-            throw new NotImplementedException();
+            using (var contexto = _contexto)
+            {
+                contexto.Set<T>().Attach(entidade);
+                _contexto.Entry(entidade).State = EntityState.Modified; 
+            }
         }
 
-        public void InserirOuAtualizar(T entidade)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ids"></param>
+        public void Excluir(params long[] ids)
         {
-            //dbSet.Add(entidade);
-            //var abc = this.context.Agendas;
+            if (ids == null || ids.Count() == 0)
+                throw new ArgumentException("Impossível excluir uma entidade nula");
 
-            this.context.Set<T>().Add(entidade);
-            
-            this.context.SaveChanges();
+            using (var contexto = _contexto)
+            {
+                //T entityToDelete = contexto.Set<T>().Where(ent => ent.Id == 1).Single();
+                T entidade;
+
+                foreach (long id in ids)
+                {
+                    entidade = ObterUm<T>(ent => ent.Id == id);
+                    Excluir<T>(entidade);                                
+                }
+            }
         }
 
-        public void Atualizar(T entidade)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="filtro"></param>
+        /// <returns></returns>
+        public IEnumerable<T> Pesquisar<T>(Func<T, bool> filtro) where T : Entidade
         {
-            throw new NotImplementedException();
+            using (var contexto = _contexto)
+            {
+                return contexto.Set<T>().Where(filtro); 
+            }
         }
 
-        public bool Excluir(params long[] ids)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="filtro"></param>
+        /// <returns></returns>
+        public T ObterUm<T>(Func<T, bool> filtro) where T : Entidade
         {
-            throw new NotImplementedException();
+            using (var contexto = _contexto)
+            {
+                return contexto.Set<T>().Single(filtro); 
+            }
         }
 
-        public IQueryable<T> Pesquisar(Expression<Func<T, bool>> filtro)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="filtro"></param>
+        /// <returns></returns>
+        public T ObterPrimeiro<T>(Func<T, bool> filtro) where T : Entidade
         {
-            throw new NotImplementedException();
+            using (var contexto = _contexto)
+            {
+                return contexto.Set<T>().First(filtro); 
+            }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public IEnumerable<T> Pesquisar<T>() where T : Entidade
+        {
+            using (var contexto = _contexto)
+            {
+                return contexto.Set<T>().ToList();    
+            }            
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entidade"></param>
+        public void Inserir<T>(T entidade) where T : Entidade
+        {
+            if (entidade == null)
+                throw new ArgumentException("Impossível inserir uma entidade Nula");
+
+            using (var contexto = _contexto)
+            {
+                contexto.Set<T>().Add(entidade); 
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entidade"></param>
+        public void Excluir<T>(T entidade) where T : Entidade
+        {
+            if (entidade == null)
+                throw new ArgumentException("Impossível excluir uma entidade nula");
+
+            using (var contexto = _contexto)
+            {
+                if (contexto.Entry(entidade).State == EntityState.Detached)
+                {
+                    contexto.Set<T>().Attach(entidade);
+                }
+                contexto.Set<T>().Remove(entidade); 
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entidade"></param>
+        public void Anexar<T>(T entidade) where T : Entidade
+        {
+            if (entidade == null)
+                throw new ArgumentException("Impossível anexar a uma entidade nula");
+
+            using (var contexto = _contexto)
+            {
+                contexto.Set<T>().Attach(entidade); 
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         private bool disposed = false;
 
         protected virtual void Dispose(bool disposing)
@@ -211,12 +237,15 @@ namespace SeiRPGManager.DAL.Repositorio
             {
                 if (disposing)
                 {
-                    context.Dispose();
+                    _contexto.Dispose();
                 }
             }
             this.disposed = true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);

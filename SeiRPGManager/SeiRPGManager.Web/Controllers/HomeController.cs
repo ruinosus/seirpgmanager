@@ -36,7 +36,10 @@ namespace SeiRPGManager.Web.Controllers
             //rDao.CriarFonteDeDados();
             SeiRPGManagerDAO<Raca> rDao = new SeiRPGManagerDAO<Raca>();
             
-            rDao.InserirOuAtualizar(r);
+            rDao.Inserir(r);
+            IList<Raca> listaRaca = rDao.ObterTodos<Raca>();
+
+            
 
             return View();
         }

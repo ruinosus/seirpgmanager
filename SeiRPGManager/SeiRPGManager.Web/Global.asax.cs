@@ -19,7 +19,7 @@ namespace SeiRPGManager.Web
         protected void Application_Start()
         {
             //Database.SetInitializer<SeiRPGManagerContexto>(new SeiRPGManagerInicializador());
-            //Database.SetInitializer<SeiRPGManagerContexto>(new DropCreateDatabaseAlways<SeiRPGManagerContexto>());
+            Database.SetInitializer<SeiRPGManagerContexto>(new DropCreateDatabaseIfModelChanges<SeiRPGManagerContexto>());
 
             AreaRegistration.RegisterAllAreas();
 
