@@ -66,6 +66,8 @@
     <Compile Include="Modelo\ClassesBasicas\Talento.cs" />
     <Compile Include="Modelo\Enum\Ajuste.cs" />
     <Compile Include="Modelo\Enum\Alcance.cs" />
+    <Compile Include="Modelo\Enum\Dado.cs" />
+    <Compile Include="Modelo\Enum\Facilidade.cs" />
     <Compile Include="Modelo\Enum\Nacionalidade.cs" />
     <Compile Include="Modelo\Enum\Sexo.cs" />
     <Compile Include="Modelo\Enum\SimNao.cs" />

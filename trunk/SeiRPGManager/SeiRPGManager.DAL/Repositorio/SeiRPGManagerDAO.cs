@@ -20,13 +20,17 @@ namespace SeiRPGManager.DAL.Repositorio
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class SeiRPGManagerDAO<T> : ISeiRPGManagerDAO<T> where T : Entidade
+    public class SeiRPGManagerDAO<T> : ISeiRPGManagerDAO<T> where T : Entidade
     {
         /// <summary>
         /// 
         /// </summary>
         internal SeiRPGManagerContexto _contexto;
         
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="context"></param>
         public SeiRPGManagerDAO(SeiRPGManagerContexto context)
         {
             this._contexto = context;            

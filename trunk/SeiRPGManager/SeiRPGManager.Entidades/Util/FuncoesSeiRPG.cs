@@ -1,6 +1,7 @@
 ﻿
 namespace SeiRPGManager.Entidades.Util
 {
+    using SeiRPGManager.Entidades.Modelo.Enum;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -12,6 +13,15 @@ namespace SeiRPGManager.Entidades.Util
     /// </summary>
     public static class FuncoesSeiRPG
     {
+        #region Construtor
+        
+        static FuncoesSeiRPG()
+        {
+            random = new Random();
+        } 
+
+        #endregion
+
         #region Manipulação de XML
         
         private static string caminhoXML = @"../../../SeiRPGManager.Entidades/Util/Planilha.xml";
@@ -59,6 +69,63 @@ namespace SeiRPGManager.Entidades.Util
             XmlNode no = planilha.SelectSingleNode(campo);
             return no.Attributes[atributo].Value;
         } 
+        #endregion
+
+        #region Parada de dados
+        
+        private static Random random;
+        private static StringBuilder jogada;
+        private static int sucessos;
+
+        public static string RolarDados(int qtdDados, Facilidade facilidade, Ajuste bonus, Ajuste penalidade, Dado dado)
+        {
+            jogada = new StringBuilder();
+            sucessos = 0;
+            int zeroOuro = 0;
+            int resultadoDado = 0;
+            bool jogadaExtra = false;
+
+            int dificuldade = ((int)facilidade + (int)bonus) - (int)penalidade;
+
+            if (dificuldade == 0)
+            {
+                dificuldade = 1;
+            }
+
+            if (dificuldade > 0)
+            {
+                while (qtdDados > 0)
+                {
+                    resultadoDado = random.Next(0, 11);
+
+                    if (resultadoDado <= dificuldade)
+                    {
+                        sucessos++;
+                        jogada.Append(resultadoDado + ",");
+                    }
+
+                    if (resultadoDado == 0)
+                    {
+                        zeroOuro++;
+                        
+                    }
+
+                    if (jogadaExtra)
+                    {
+                        qtdDados = qtdDados + zeroOuro;
+                        jogadaExtra = false;
+                    }
+
+                    qtdDados--;
+                }
+            }
+            else
+            {
+                jogada.Append("Falha crítica automática");
+            }
+
+            return jogada.ToString();
+        }
         #endregion
     }
 }
