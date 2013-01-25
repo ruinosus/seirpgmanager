@@ -27,107 +27,107 @@ namespace SeiRPGManager.DAL.Repositorio
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Agenda> Agendas { get; set; }
+        public DbSet<Agenda> Agenda { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Anotacao> Anotacoes { get; set; }
+        public DbSet<Anotacao> Anotacao { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Arma> Armas { get; set; }
+        public DbSet<Arma> Arma { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Campanha> Campanhas { get; set; }
+        public DbSet<Campanha> Campanha { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<EnredoPool> Enredos { get; set; }
+        public DbSet<EnredoPool> EnredoPool { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Equipamento> Equipamentos { get; set; }
+        public DbSet<Equipamento> Equipamento { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Especializacao> Especializacoes { get; set; }
+        public DbSet<Especializacao> Especializacao { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Habilitador> Habilitadores { get; set; }
+        public DbSet<Habilitador> Habilitador { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Jogador> Jogadores { get; set; }
+        public DbSet<Jogador> Jogador { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Mensagem> Mensagens { get; set; }
+        public DbSet<Mensagem> Mensagem { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<NomePool> Nomes { get; set; }
+        public DbSet<NomePool> NomePool { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Ocupacao> Ocupacoes { get; set; }
+        public DbSet<Ocupacao> Ocupacao { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Parametro> Parametros { get; set; }
+        public DbSet<Parametro> Parametro { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Personagem> Personagens { get; set; }
+        public DbSet<Personagem> Personagem { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Personalidade> Personalidades { get; set; }
+        public DbSet<Personalidade> Personalidade { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Precedente> Precedentes { get; set; }
+        public DbSet<Precedente> Precedente { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<PrologoPool> Prologos { get; set; }
+        public DbSet<PrologoPool> PrologoPool { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Raca> Racas { get; set; }
+        public DbSet<Raca> Raca { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Saude> Saudes { get; set; }
+        public DbSet<Saude> Saude { get; set; }
 
         /// <summary>
         /// TODO: Update Header
         /// </summary>
-        public DbSet<Sistema> Sistemas { get; set; }
+        public DbSet<Sistema> Sistema { get; set; }
 
         /// <summary>
         /// TODO: Update Header
@@ -137,6 +137,7 @@ namespace SeiRPGManager.DAL.Repositorio
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            
             //modelBuilder.Entity<Instructor>()
             //    .HasOptional(p => p.OfficeAssignment).WithRequired(p => p.Instructor);
             //modelBuilder.Entity<Course>()
