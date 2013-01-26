@@ -1064,14 +1064,14 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
 
         #region Especializacoes HabilitadorSobrenatural1
 
-        public int Especializacao1HabilitadorSobrenatural1
+        public int EspHabSob1Slot1
         {
             get;
             set
             {
                 if (value < 0)
                 {
-                    Especializacao1HabilitadorSobrenatural1 = 0;
+                    EspHabSob1Slot1 = 0;
                 }
                 else if (value > HabilitadorSobrenatural1)
                 {
@@ -1079,15 +1079,110 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
                 }
                 else if (value > 3)
                 {
-                    Especializacao1HabilitadorSobrenatural1 = 3;
+                    EspHabSob1Slot1 = 3;
                 }
                 else
                 {
-                    Especializacao1HabilitadorSobrenatural1 = value;
+                    EspHabSob1Slot1 = value;
                 }
             }
         }
 
+        public int EspHabSob1Slot2
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob1Slot2 = 0;
+                }
+                else if (value > HabilitadorSobrenatural1)
+                {
+                    value = HabilitadorSobrenatural1;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob1Slot2 = 3;
+                }
+                else
+                {
+                    EspHabSob1Slot2 = value;
+                }
+            }
+        }
+
+        public int EspHabSob1Slot3
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob1Slot3 = 0;
+                }
+                else if (value > HabilitadorSobrenatural1)
+                {
+                    value = HabilitadorSobrenatural1;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob1Slot3 = 3;
+                }
+                else
+                {
+                    EspHabSob1Slot3 = value;
+                }
+            }
+        }
+
+        public int EspHabSob1Slot4
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob1Slot4 = 0;
+                }
+                else if (value > HabilitadorSobrenatural1)
+                {
+                    value = HabilitadorSobrenatural1;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob1Slot4 = 3;
+                }
+                else
+                {
+                    EspHabSob1Slot4 = value;
+                }
+            }
+        }
+
+        public int EspHabSob1Slot5
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob1Slot5 = 0;
+                }
+                else if (value > HabilitadorSobrenatural1)
+                {
+                    value = HabilitadorSobrenatural1;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob1Slot5 = 3;
+                }
+                else
+                {
+                    EspHabSob1Slot5 = value;
+                }
+            }
+        }
         #endregion
 
         public int HabilitadorSobrenatural2
@@ -1112,6 +1207,126 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
 
         #region Especializacoes HabilitadorSobrenatural2
 
+        public int EspHabSob2Slot1
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob2Slot1 = 0;
+                }
+                else if (value > HabilitadorSobrenatural2)
+                {
+                    value = HabilitadorSobrenatural2;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob2Slot1 = 3;
+                }
+                else
+                {
+                    EspHabSob2Slot1 = value;
+                }
+            }
+        }
+
+        public int EspHabSob2Slot2
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob2Slot2 = 0;
+                }
+                else if (value > HabilitadorSobrenatural2)
+                {
+                    value = HabilitadorSobrenatural2;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob2Slot2 = 3;
+                }
+                else
+                {
+                    EspHabSob2Slot2 = value;
+                }
+            }
+        }
+
+        public int EspHabSob2Slot3
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob2Slot3 = 0;
+                }
+                else if (value > HabilitadorSobrenatural2)
+                {
+                    value = HabilitadorSobrenatural2;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob2Slot3 = 3;
+                }
+                else
+                {
+                    EspHabSob2Slot3 = value;
+                }
+            }
+        }
+
+        public int EspHabSob2Slot4
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob2Slot4 = 0;
+                }
+                else if (value > HabilitadorSobrenatural2)
+                {
+                    value = HabilitadorSobrenatural2;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob2Slot4 = 3;
+                }
+                else
+                {
+                    EspHabSob2Slot4 = value;
+                }
+            }
+        }
+
+        public int EspHabSob2Slot5
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob2Slot5 = 0;
+                }
+                else if (value > HabilitadorSobrenatural2)
+                {
+                    value = HabilitadorSobrenatural2;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob2Slot5 = 3;
+                }
+                else
+                {
+                    EspHabSob2Slot5 = value;
+                }
+            }
+        }
+
         #endregion
 
         public int HabilitadorSobrenatural3
@@ -1135,6 +1350,126 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
         }
 
         #region Especializacoes HabilitadorSobrenatural3
+
+        public int EspHabSob3Slot1
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob3Slot1 = 0;
+                }
+                else if (value > HabilitadorSobrenatural3)
+                {
+                    value = HabilitadorSobrenatural3;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob3Slot1 = 3;
+                }
+                else
+                {
+                    EspHabSob3Slot1 = value;
+                }
+            }
+        }
+
+        public int EspHabSob3Slot2
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob3Slot2 = 0;
+                }
+                else if (value > HabilitadorSobrenatural3)
+                {
+                    value = HabilitadorSobrenatural3;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob3Slot2 = 3;
+                }
+                else
+                {
+                    EspHabSob3Slot2 = value;
+                }
+            }
+        }
+
+        public int EspHabSob3Slot3
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob3Slot3 = 0;
+                }
+                else if (value > HabilitadorSobrenatural3)
+                {
+                    value = HabilitadorSobrenatural3;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob3Slot3 = 3;
+                }
+                else
+                {
+                    EspHabSob3Slot3 = value;
+                }
+            }
+        }
+
+        public int EspHabSob3Slot4
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob3Slot4 = 0;
+                }
+                else if (value > HabilitadorSobrenatural3)
+                {
+                    value = HabilitadorSobrenatural3;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob3Slot4 = 3;
+                }
+                else
+                {
+                    EspHabSob3Slot4 = value;
+                }
+            }
+        }
+
+        public int EspHabSob3Slot5
+        {
+            get;
+            set
+            {
+                if (value < 0)
+                {
+                    EspHabSob3Slot5 = 0;
+                }
+                else if (value > HabilitadorSobrenatural3)
+                {
+                    value = HabilitadorSobrenatural3;
+                }
+                else if (value > 3)
+                {
+                    EspHabSob3Slot5 = 3;
+                }
+                else
+                {
+                    EspHabSob3Slot5 = value;
+                }
+            }
+        }
 
         #endregion
 
