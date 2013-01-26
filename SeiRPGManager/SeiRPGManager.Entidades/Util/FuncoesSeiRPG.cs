@@ -14,16 +14,16 @@ namespace SeiRPGManager.Entidades.Util
     public static class FuncoesSeiRPG
     {
         #region Construtor
-        
+
         static FuncoesSeiRPG()
         {
             random = new Random();
-        } 
+        }
 
         #endregion
 
         #region Manipulação de XML
-        
+
         private static string caminhoXML = @"../../../SeiRPGManager.Entidades/Util/Planilha.xml";
 
         public static XmlDocument CarregarPlanilha()
@@ -68,22 +68,24 @@ namespace SeiRPGManager.Entidades.Util
             XmlDocument planilha = CarregarPlanilha();
             XmlNode no = planilha.SelectSingleNode(campo);
             return no.Attributes[atributo].Value;
-        } 
+        }
         #endregion
 
         #region Parada de dados
-        
+
         private static Random random;
         private static StringBuilder jogada;
         private static int sucessos;
+        private static int noveFora;
 
-        public static string RolarDados(int qtdDados, Facilidade facilidade, Ajuste bonus, Ajuste penalidade, Dado dado)
+        public static string ParadaDados(int qtdDados, Facilidade facilidade, Ajuste bonus, Ajuste penalidade)
         {
             jogada = new StringBuilder();
-            sucessos = 0;
-            int zeroOuro = 0;
+            sucessos = 0;            
+            noveFora = 0;
+            
             int resultadoDado = 0;
-            bool jogadaExtra = false;
+            int zeroOuro = 0;
 
             int dificuldade = ((int)facilidade + (int)bonus) - (int)penalidade;
 
@@ -94,37 +96,100 @@ namespace SeiRPGManager.Entidades.Util
 
             if (dificuldade > 0)
             {
-                while (qtdDados > 0)
+                for (int i = 1; i <= qtdDados; i++)
                 {
-                    resultadoDado = random.Next(0, 11);
+                    resultadoDado = RolarDados(Dado.D10);
 
                     if (resultadoDado <= dificuldade)
                     {
-                        sucessos++;
-                        jogada.Append(resultadoDado + ",");
+                        sucessos++;                        
                     }
 
                     if (resultadoDado == 0)
                     {
                         zeroOuro++;
-                        
                     }
 
-                    if (jogadaExtra)
+                    if (resultadoDado == 9)
                     {
-                        qtdDados = qtdDados + zeroOuro;
-                        jogadaExtra = false;
+                        noveFora++;
                     }
 
-                    qtdDados--;
+                    FormatarResultadoDado(resultadoDado, i == qtdDados);
                 }
+
+                if (zeroOuro > 0)
+                {
+                    jogada.AppendLine("");
+                    jogada.Append("Dados extra: ");
+
+                    for (int i = 0; i < zeroOuro; i++)
+                    {
+                        resultadoDado = RolarDados(Dado.D10);
+
+                        if (resultadoDado <= dificuldade)
+                        {
+                            sucessos++;
+                        }
+
+                        if (resultadoDado == 9)
+                        {
+                            noveFora++;
+                        }
+                        
+                        FormatarResultadoDado(resultadoDado, i == zeroOuro);
+                    }
+                }
+
+                VerificarResultado();
             }
             else
             {
-                jogada.Append("Falha crítica automática");
+                jogada.Clear();
+                jogada.Append("Falha crítica automática!");
             }
 
             return jogada.ToString();
+        }
+
+        private static int RolarDados(Dado dado)
+        {
+            return random.Next(0, (int)dado);
+        }
+
+        private static void FormatarResultadoDado(int dado, bool ultimo)
+        {
+            jogada.Append(dado);
+
+            if (ultimo)
+            {
+                jogada.Append(".");
+            }
+            else
+            {
+                jogada.Append(",");
+            }
+        }
+
+        private static void VerificarResultado()
+        {            
+            jogada.AppendLine("");
+
+
+            if (sucessos > noveFora)
+            {
+                jogada.Append("Sucesso!");
+            }
+
+            if (sucessos == noveFora)
+            {
+                jogada.Append("Fracasso");
+            }
+
+            if (noveFora > sucessos)
+            {
+                jogada.Append("Falha crítica!!!");
+            }
         }
         #endregion
     }
