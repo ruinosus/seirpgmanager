@@ -1,5 +1,6 @@
 ﻿using SeiRPGManager.DAL.Repositorio;
 using SeiRPGManager.Entidades.Modelo.ClassesBasicas;
+using SeiRPGManager.Entidades.Modelo.Enum;
 using SeiRPGManager.Entidades.Util;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,11 @@ namespace SeiRPGManager.Teste
             SeiRPGManagerDAO<Raca> rDao = new SeiRPGManagerDAO<Raca>();
             rDao.Inserir(r);
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = FuncoesSeiRPG.ParadaDados(8, Facilidade.Um, Ajuste.SemAjuste, Ajuste.SemAjuste);
         }
     }
 }
