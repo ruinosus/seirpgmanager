@@ -58,13 +58,7 @@
     <Compile Include="Modelo\ClassesBasicas\Personagem.cs" />
     <Compile Include="Modelo\ClassesBasicas\Personalidade.cs" />
     <Compile Include="Modelo\ClassesPlanilha\ArmaPlanilha.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\AtributoPlanilha.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\BarraEnergiaPlanilha.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\BarraSaudePlanilha.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\CapacidadePlanilha.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\ConceitoPlanilha.cs" />
     <Compile Include="Modelo\ClassesPlanilha\EquipamentoPlanilha.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\HabilitadorPlanilha.cs" />
     <Compile Include="Modelo\ClassesPlanilha\Planilha.cs" />
     <Compile Include="Modelo\ClassesBasicas\Precedente.cs" />
     <Compile Include="Modelo\ClassesBasicas\PrologoPool.cs" />
@@ -72,8 +66,7 @@
     <Compile Include="Modelo\ClassesBasicas\Saude.cs" />
     <Compile Include="Modelo\ClassesBasicas\Sistema.cs" />
     <Compile Include="Modelo\ClassesBasicas\Talento.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\PrecedentePlanilha.cs" />
-    <Compile Include="Modelo\ClassesPlanilha\TalentoPlanilha.cs" />
+    <Compile Include="Modelo\ClassesPlanilha\SaudePlanilha.cs" />
     <Compile Include="Modelo\Enum\Ajuste.cs" />
     <Compile Include="Modelo\Enum\Alcance.cs" />
     <Compile Include="Modelo\Enum\Dado.cs" />
