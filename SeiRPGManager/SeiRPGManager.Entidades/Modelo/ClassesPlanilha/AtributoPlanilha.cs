@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 {
-    public class AtributoPlanilha
+    public static class AtributoPlanilha
     {
         public class Fisico
         {

@@ -5,6 +5,7 @@
 // -----------------------------------------------------------------------
 namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 {
+    using SeiRPGManager.Entidades.Modelo.ClassesBasicas;
     using System;
     using System.Collections.Generic;
     using System.Linq;
