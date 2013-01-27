@@ -1,12 +1,14 @@
 ﻿
 namespace SeiRPGManager.Entidades.Util
 {
-    using SeiRPGManager.Entidades.Modelo.Enum;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Xml;
+    using SeiRPGManager.Entidades.Modelo.ClassesBasicas;
+using SeiRPGManager.Entidades.Modelo.ClassesPlanilha;
+using SeiRPGManager.Entidades.Modelo.Enum;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml;
 
     /// <summary>
     /// Classe que fornece vários métodos que serão comuns para toda a aplicação.
@@ -30,6 +32,13 @@ namespace SeiRPGManager.Entidades.Util
         {
             XmlDocument planilha = new XmlDocument();
             planilha.Load(caminhoXML);
+            return planilha;
+        }
+
+        public static XmlDocument CarregarPlanilha(string xmlString)
+        {
+            XmlDocument planilha = new XmlDocument();
+            planilha.LoadXml(xmlString);
             return planilha;
         }
 
@@ -191,6 +200,22 @@ namespace SeiRPGManager.Entidades.Util
                 jogada.Append("Falha crítica!!!");
             }
         }
+        #endregion
+
+        #region Planilha
+
+        public static Planilha MontarPlanilha(Personagem personagem)
+        {
+            Planilha planilha = new Planilha();
+            XmlDocument planilhaXMl = new XmlDocument();
+            
+            planilhaXMl = CarregarPlanilha(personagem.Planilha.ToString());
+
+            //planilha.Atributo
+
+            return planilha;
+        }
+
         #endregion
     }
 }

@@ -14,7 +14,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 
         public int EnergiaVital { get; set; }
 
-        public int EnergiaVital { get; set; }
+        public int Corrupcao { get; set; }
 
         #endregion
     }
