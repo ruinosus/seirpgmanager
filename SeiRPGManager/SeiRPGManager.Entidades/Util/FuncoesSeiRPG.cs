@@ -211,9 +211,21 @@ using System.Xml;
             
             planilhaXMl = CarregarPlanilha(personagem.Planilha.ToString());
 
-            //planilha.Atributo
+            //planilha.Forca = 1;
 
             return planilha;
+        }
+
+        public static string TransformarPlanilha(Personagem personagem)
+        {
+            Planilha planilha = new Planilha();
+            XmlDocument planilhaXMl = new XmlDocument();
+
+            planilhaXMl = CarregarPlanilha(personagem.Planilha.ToString());
+
+            //planilha.Forca = 1;
+
+            return planilha.ToString();
         }
 
         #endregion
