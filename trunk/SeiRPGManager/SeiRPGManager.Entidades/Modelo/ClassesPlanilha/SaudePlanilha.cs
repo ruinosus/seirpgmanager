@@ -11,21 +11,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
         public int Nivel
         {
             get;
-            set
-            {
-                if (value == 0)
-                {
-                    Nivel = 1;
-                }
-                if (value > 5)
-                {
-                    Nivel = 5;
-                }
-                else
-                {
-                    Nivel = value;
-                }
-            }
+            set;
         }
 
         public string Estado { get; set; }
@@ -33,21 +19,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
         public int Penalidade
         {
             get;
-            set
-            {
-                if (value > 0)
-                {
-                    Penalidade = 0;
-                }
-                if (value < -5)
-                {
-                    Penalidade = -5;
-                }
-                else
-                {
-                    Penalidade = value;
-                }
-            }
+            set;
         }
     }
 }
