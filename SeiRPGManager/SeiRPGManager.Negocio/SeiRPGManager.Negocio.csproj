@@ -42,7 +42,15 @@
     <Compile Include="Exceptions\SeiRPGManagerException.cs" />
     <Compile Include="Exceptions\ViolacaoChaveUnicaException.cs" />
     <Compile Include="Exceptions\ViolacaoReferenciaException.cs" />
+    <Compile Include="PersonagemNegocios.cs" />
+    <Compile Include="PlanilhaNegocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SeiRPGManager.Entidades\SeiRPGManager.Entidades.csproj">
+      <Project>{c588b0aa-e49b-406a-b07a-794618f00730}</Project>
+      <Name>SeiRPGManager.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
