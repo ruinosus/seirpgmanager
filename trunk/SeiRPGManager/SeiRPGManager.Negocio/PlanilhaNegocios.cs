@@ -227,5 +227,41 @@ namespace SeiRPGManager.Negocio
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Capacidade/IndiceProtecao", capacidade.IndiceProtecao.ToString());
         }
 
+        public AtributosFisicosPlanilha ObterAtributosFisicos(Planilha planilha)
+        {
+            AtributosFisicosPlanilha atributo = new AtributosFisicosPlanilha();
+
+            planilha.AtributosFisicos.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("",""));
+            planilha.AtributosFisicos.Forca.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            planilha.AtributosFisicos.Destreza.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            planilha.AtributosFisicos.Resistencia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+
+            return atributo;
+        }
+
+        public AtributosMentaisPlanilha ObterAtributosMentais(Planilha planilha)
+        {
+            AtributosMentaisPlanilha atributo = new AtributosMentaisPlanilha();
+
+            planilha.AtributosMentais.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("", ""));
+            planilha.AtributosMentais.Intelecto.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            planilha.AtributosMentais.Influencia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            planilha.AtributosMentais.Percepcao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+
+            return atributo;
+        }
+
+        public AtributosSobrenaturaisPlanilha ObterAtributosFisicos(Planilha planilha)
+        {
+            AtributosSobrenaturaisPlanilha atributo = new AtributosSobrenaturaisPlanilha();
+
+            planilha.AtributosSobrenaturais.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("", ""));
+            planilha.AtributosSobrenaturais.Determinacao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            planilha.AtributosSobrenaturais.Intuicao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            planilha.AtributosSobrenaturais.Imunidade.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+
+            return atributo;
+        }
+
     }
 }
