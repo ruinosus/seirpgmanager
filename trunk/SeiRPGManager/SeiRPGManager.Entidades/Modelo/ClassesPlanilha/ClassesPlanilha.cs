@@ -10,7 +10,10 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
     {
         public int Valor
         {
-            get;
+            get
+            {
+                return Valor;
+            }
             set
             {
                 if (value > 10)
@@ -61,7 +64,10 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
     {
         public int Valor
         {
-            get;
+            get
+            {
+                return Valor;
+            }
             set
             {
                 if (value > 5)
@@ -85,7 +91,10 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
     {
         public int Valor
         {
-            get;
+            get
+            {
+                return Valor;
+            }
             set
             {
                 if (value > 3)
@@ -110,83 +119,65 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
     
     public class HabilitadorAtletico : HabilitadorPlanilha
     {
-        private EspecializacaoPlanilha Salto { get; set; }
-        private EspecializacaoPlanilha Corrida { get; set; }
-        private EspecializacaoPlanilha Escalada { get; set; }
-        private EspecializacaoPlanilha Natacao { get; set; }
-        private EspecializacaoPlanilha Esporte { get; set; }
+        public EspecializacaoPlanilha Salto { get; set; }
+        public EspecializacaoPlanilha Corrida { get; set; }
+        public EspecializacaoPlanilha Escalada { get; set; }
+        public EspecializacaoPlanilha Natacao { get; set; }
+        public EspecializacaoPlanilha Esporte { get; set; }
     }
 
     public class HabilitadorCombateProximo : HabilitadorPlanilha
     {
-        private EspecializacaoPlanilha CombateDesarmado { get; set; }
-        private EspecializacaoPlanilha Evasao { get; set; }
-        private EspecializacaoPlanilha ArmBrancaCurta { get; set; }
-        private EspecializacaoPlanilha ArmBrancaMedia { get; set; }
-        private EspecializacaoPlanilha ArmBrancaLonga { get; set; }
+        public EspecializacaoPlanilha CombateDesarmado { get; set; }
+        public EspecializacaoPlanilha Evasao { get; set; }
+        public EspecializacaoPlanilha ArmBrancaCurta { get; set; }
+        public EspecializacaoPlanilha ArmBrancaMedia { get; set; }
+        public EspecializacaoPlanilha ArmBrancaLonga { get; set; }
     }
 
     public class HabilitadorCombateAfastado : HabilitadorPlanilha
     {
-        private EspecializacaoPlanilha Armamento { get; set; }
-        private EspecializacaoPlanilha ArmImpulso { get; set; }
-        private EspecializacaoPlanilha ArmFogoLeve { get; set; }
-        private EspecializacaoPlanilha ArmFogoMedia { get; set; }
-        private EspecializacaoPlanilha ArmFogoPesada { get; set; }
-    }
-
-    public class HabilitadorCombateAfastado : HabilitadorPlanilha
-    {
-        private EspecializacaoPlanilha Armamento { get; set; }
-        private EspecializacaoPlanilha ArmImpulso { get; set; }
-        private EspecializacaoPlanilha ArmFogoLeve { get; set; }
-        private EspecializacaoPlanilha ArmFogoMedia { get; set; }
-        private EspecializacaoPlanilha ArmFogoPesada { get; set; }
-    }
-
-    public class HabilitadorCombateAfastado : HabilitadorPlanilha
-    {
-        private EspecializacaoPlanilha Armamento { get; set; }
-        private EspecializacaoPlanilha ArmImpulso { get; set; }
-        private EspecializacaoPlanilha ArmFogoLeve { get; set; }
-        private EspecializacaoPlanilha ArmFogoMedia { get; set; }
-        private EspecializacaoPlanilha ArmFogoPesada { get; set; }
+        public EspecializacaoPlanilha Armamento { get; set; }
+        public EspecializacaoPlanilha ArmImpulso { get; set; }
+        public EspecializacaoPlanilha ArmFogoLeve { get; set; }
+        public EspecializacaoPlanilha ArmFogoMedia { get; set; }
+        public EspecializacaoPlanilha ArmFogoPesada { get; set; }
     }
 
     public class HabilitadorInstrucao : HabilitadorPlanilha
     {
-        private EspecializacaoPlanilha Medicina { get; set; }
-        private EspecializacaoPlanilha Computacao { get; set; }
-        private EspecializacaoPlanilha Linguistica { get; set; }
-        private EspecializacaoPlanilha Conhecimento { get; set; }
-        private EspecializacaoPlanilha Ocultismo { get; set; }
+        public EspecializacaoPlanilha Medicina { get; set; }
+        public EspecializacaoPlanilha Computacao { get; set; }
+        public EspecializacaoPlanilha Linguistica { get; set; }
+        public EspecializacaoPlanilha Conhecimento { get; set; }
+        public EspecializacaoPlanilha Ocultismo { get; set; }
     }
 
     public class HabilitadorSocial : HabilitadorPlanilha
     {
-        private EspecializacaoPlanilha Empatia { get; set; }
-        private EspecializacaoPlanilha TratoAnimais { get; set; }
-        private EspecializacaoPlanilha Labia { get; set; }
-        private EspecializacaoPlanilha Malandragem { get; set; }
-        private EspecializacaoPlanilha Performance { get; set; }
+        public EspecializacaoPlanilha Empatia { get; set; }
+        public EspecializacaoPlanilha TratoAnimais { get; set; }
+        public EspecializacaoPlanilha Labia { get; set; }
+        public EspecializacaoPlanilha Malandragem { get; set; }
+        public EspecializacaoPlanilha Performance { get; set; }
     }
 
     public class HabilitadorPerspicacia : HabilitadorPlanilha
     {
-        private EspecializacaoPlanilha Investigacao { get; set; }
-        private EspecializacaoPlanilha Furtividade { get; set; }
-        private EspecializacaoPlanilha Prestidigitacao { get; set; }
-        private EspecializacaoPlanilha Reparo { get; set; }
-        private EspecializacaoPlanilha Subterfugio { get; set; }
+        public EspecializacaoPlanilha Investigacao { get; set; }
+        public EspecializacaoPlanilha Furtividade { get; set; }
+        public EspecializacaoPlanilha Prestidigitacao { get; set; }
+        public EspecializacaoPlanilha Reparo { get; set; }
+        public EspecializacaoPlanilha Subterfugio { get; set; }
     }
 
     public class HabilitadorSobrenatural : HabilitadorPlanilha
     {
-        private EspecializacaoPlanilha Slot1 { get; set; }
-        private EspecializacaoPlanilha Slot2 { get; set; }
-        private EspecializacaoPlanilha Slot3 { get; set; }
-        private EspecializacaoPlanilha Slot4 { get; set; }
-        private EspecializacaoPlanilha Slot5 { get; set; }
+        public EspecializacaoPlanilha Slot1 { get; set; }
+        public EspecializacaoPlanilha Slot2 { get; set; }
+        public EspecializacaoPlanilha Slot3 { get; set; }
+        public EspecializacaoPlanilha Slot4 { get; set; }
+        public EspecializacaoPlanilha Slot5 { get; set; }
     }
 
     public class ArmaPlanilha
@@ -210,7 +201,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 
     public class EquipamentoPlanilha
     {
-        public int Pente { get; set; }
+        public int Tamanho { get; set; }
         public string Item { get; set; }
         public int Quantidade { get; set; }
     }
@@ -265,7 +256,10 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
     {
         public int Vitalidade
         {
-            get;
+            get
+            {
+                return Vitalidade;
+            }
             set
             {
                 if (value > 10)
@@ -285,7 +279,10 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 
         public int EnergiaVital
         {
-            get;
+            get
+            {
+                return EnergiaVital;
+            }
             set
             {
                 if (value > 10)
@@ -305,7 +302,10 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 
         public int Corrupcao
         {
-            get;
+            get
+            {
+                return Corrupcao;
+            }
             set
             {
                 if (value > 10)

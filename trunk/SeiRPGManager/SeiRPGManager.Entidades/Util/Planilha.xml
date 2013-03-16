@@ -303,6 +303,15 @@
       </Tamanho>
     </Slot5>
   </Equipamento>
+  <Capacidade>
+    <DefesaFisica></DefesaFisica>
+    <DefesaMental></DefesaMental>
+    <ModificadorIniciativa></ModificadorIniciativa>
+    <Deslocamento></Deslocamento>
+    <Carga></Carga>
+    <IndiceProtecao></IndiceProtecao>
+    <Subturno></Subturno>
+  </Capacidade>
   <Saude>
     <Slot1>
       <Estado>
