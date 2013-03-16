@@ -51,13 +51,13 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 
         #region Talentos
 
-        public IList<TalentoPlanilha> Talentos { get; set; }
+        public TalentoPlanilha[] Talentos { get; set; }
 
         #endregion
 
         #region Precedentes
 
-        public IList<PrecedentePlanilha> Precedentes { get; set; }
+        public PrecedentePlanilha[] Precedentes { get; set; }
 
         #endregion
 
@@ -69,19 +69,19 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesPlanilha
 
         #region Armas
 
-        public List<ArmaPlanilha> Armas { get; set; }
+        public ArmaPlanilha[] Armas { get; set; }
 
         #endregion
 
         #region Equipamentos
 
-        public List<EquipamentoPlanilha> Equipamentos { get; set; }
+        public EquipamentoPlanilha[] Equipamentos { get; set; }
 
         #endregion
 
         #region Barra Saude
 
-        public List<SaudePlanilha> EstadosSaude { get; set; }
+        public SaudePlanilha[] EstadosSaude { get; set; }
 
         #endregion
 

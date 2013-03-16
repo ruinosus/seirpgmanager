@@ -82,7 +82,9 @@
     <Compile Include="Util\FuncoesSeiRPG.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Util\Planilha.xml" />
+    <Content Include="Util\Planilha.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
