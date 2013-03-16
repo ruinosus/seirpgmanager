@@ -66,13 +66,13 @@ using System.Xml;
             planilha.Save(caminhoXML);
         }
 
-        public static string RetornarValorConteudo(string campo, string valor)
+        public static string RetornarValorConteudo(string campo)
         {
             XmlDocument planilha = CarregarPlanilha();
             return planilha.SelectSingleNode(campo).InnerText;
         }
 
-        public static string RetornarAtributoConteudo(string campo, string atributo, string valor)
+        public static string RetornarAtributoConteudo(string campo, string atributo)
         {
             XmlDocument planilha = CarregarPlanilha();
             XmlNode no = planilha.SelectSingleNode(campo);
