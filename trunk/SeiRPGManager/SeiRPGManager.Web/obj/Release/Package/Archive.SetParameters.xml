@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/SeiRPGManager.Web_deploy" />
+  <setParameter name="SeiRPGManagerCon-Web.config Connection String" value="Server=localhost; Database=SeiRPGManagerDB; Uid=root; Pwd=;" />
+</parameters>

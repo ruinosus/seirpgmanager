@@ -1,0 +1,9 @@
+﻿<parameters>
+  <parameter name="IIS Web Application Name" defaultValue="Default Web Site/SeiRPGManager.Web_deploy" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\MapfreBuilder\\Publish$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\MapfreBuilder\\Publish$" />
+  </parameter>
+  <parameter name="SeiRPGManagerCon-Web.config Connection String" description="SeiRPGManagerCon Connection String used in web.config by the application to access the database." defaultValue="Server=localhost; Database=SeiRPGManagerDB; Uid=root; Pwd=;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\MapfreBuilder\\Publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='SeiRPGManagerCon']/@connectionString" />
+  </parameter>
+</parameters>

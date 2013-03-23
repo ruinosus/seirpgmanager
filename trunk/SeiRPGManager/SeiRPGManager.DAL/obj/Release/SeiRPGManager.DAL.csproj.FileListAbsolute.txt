@@ -1,0 +1,15 @@
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\SeiRPGManager.DAL.dll.config
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\SeiRPGManager.DAL.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\SeiRPGManager.DAL.pdb
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\EntityFramework.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\SeiRPGManager.Entidades.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\SeiRPGManager.Negocio.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\SeiRPGManager.Entidades.pdb
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\SeiRPGManager.Negocio.pdb
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\bin\Release\EntityFramework.xml
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\obj\Release\SeiRPGManager.DAL.csprojResolveAssemblyReference.cache
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\obj\Release\SeiRPGManager.DAL.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.DAL\obj\Release\SeiRPGManager.DAL.pdb
+E:\MapfreBuilder\Publish\SeiRPGManager.DAL.dll.config
+E:\MapfreBuilder\Publish\SeiRPGManager.DAL.dll
+E:\MapfreBuilder\Publish\SeiRPGManager.DAL.pdb

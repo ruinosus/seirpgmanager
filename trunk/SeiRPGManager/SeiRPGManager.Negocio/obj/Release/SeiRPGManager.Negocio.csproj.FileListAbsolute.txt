@@ -1,0 +1,6 @@
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Negocio\bin\Release\SeiRPGManager.Negocio.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Negocio\bin\Release\SeiRPGManager.Negocio.pdb
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Negocio\obj\Release\SeiRPGManager.Negocio.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Negocio\obj\Release\SeiRPGManager.Negocio.pdb
+E:\MapfreBuilder\Publish\SeiRPGManager.Negocio.dll
+E:\MapfreBuilder\Publish\SeiRPGManager.Negocio.pdb

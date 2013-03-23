@@ -41,7 +41,7 @@
   </Atributo>
   <Habilitador>
     <Fisico>
-      <Atletico>
+      <Atletico Valor="">
         <Salto Requerido="N">
         </Salto>
         <Escalada Requerido="N">
@@ -53,7 +53,7 @@
         <Esporte Requerido="N">
         </Esporte>
       </Atletico>
-      <CombateProximo>
+      <CombateProximo Valor="">
         <CombateDesarmado Requerido="N">
         </CombateDesarmado>
         <Evasao Requerido="N">
@@ -65,7 +65,7 @@
         <ArmaBrancaLonga Requerido="N">
         </ArmaBrancaLonga>
       </CombateProximo>
-      <CombateAfastado>
+      <CombateAfastado Valor="">
         <Armamento Requerido="N">
         </Armamento>
         <ArmaImpulso Requerido="N">
@@ -79,7 +79,7 @@
       </CombateAfastado>
     </Fisico>
     <Mental>
-      <Instrucao>
+      <Instrucao Valor="">
         <Medicina Requerido="N">
         </Medicina>
         <Computacao Requerido="S">
@@ -91,7 +91,7 @@
         <Ocultismo Requerido="N">
         </Ocultismo>
       </Instrucao>
-      <Social>
+      <Social Valor="">
         <Empatia Requerido="N">
         </Empatia>
         <TratoComAnimais Requerido="N">
@@ -103,7 +103,7 @@
         <Performance Requerido="N">
         </Performance>
       </Social>
-      <Perspicacia>
+      <Perspicacia Valor="">
         <Investigacao Requerido="N">
         </Investigacao>
         <Furtividade Requerido="N">
@@ -117,7 +117,7 @@
       </Perspicacia>
     </Mental>
     <Sobrenatural>
-      <HabilitadorSobrenatural1 Nome="">
+      <HabilitadorSobrenatural1 Nome="" Valor="">
         <Especializacao1 Requerido="S">
         </Especializacao1>
         <Especializacao2 Requerido="S">
@@ -129,7 +129,7 @@
         <Especializacao5 Requerido="S">
         </Especializacao5>
       </HabilitadorSobrenatural1>
-      <HabilitadorSobrenatural2 Nome="">
+      <HabilitadorSobrenatural2 Nome="" Valor="">
         <Especializacao1 Requerido="S">
         </Especializacao1>
         <Especializacao2 Requerido="S">
@@ -141,7 +141,7 @@
         <Especializacao5 Requerido="S">
         </Especializacao5>
       </HabilitadorSobrenatural2>
-      <HabilitadorSobrenatural3 Nome="">
+      <HabilitadorSobrenatural3 Nome="" Valor="">
         <Especializacao1 Requerido="S">
         </Especializacao1>
         <Especializacao2 Requerido="S">
