@@ -1,0 +1,7 @@
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Entidades\obj\Release\SeiRPGManager.Entidades.csprojResolveAssemblyReference.cache
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Entidades\bin\Release\SeiRPGManager.Entidades.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Entidades\bin\Release\SeiRPGManager.Entidades.pdb
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Entidades\obj\Release\SeiRPGManager.Entidades.dll
+E:\Projetos\seirpgmanager\SeiRPGManager\SeiRPGManager.Entidades\obj\Release\SeiRPGManager.Entidades.pdb
+E:\MapfreBuilder\Publish\SeiRPGManager.Entidades.dll
+E:\MapfreBuilder\Publish\SeiRPGManager.Entidades.pdb

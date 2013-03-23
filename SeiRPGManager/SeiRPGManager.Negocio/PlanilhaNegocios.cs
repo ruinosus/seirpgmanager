@@ -19,7 +19,7 @@ namespace SeiRPGManager.Negocio
             AtualizarHabilitadorAtletico(planilha.Atletico);
             AtualizarHabilitadorCombateProximo(planilha.CombateProximo);
             AtualizarHabilitadorCombateAfastado(planilha.CombateAfastado);
-            
+
             AtualizarHabilitadorInstrucao(planilha.Instrucao);
             AtualizarHabilitadorSocial(planilha.Social);
             AtualizarHabilitadorPerspicacia(planilha.Perspicacia);
@@ -32,7 +32,7 @@ namespace SeiRPGManager.Negocio
             AtualizarSaude(planilha.EstadosSaude);
             AtualizarPrecedentes(planilha.Precedentes);
             AtualizarTalentos(planilha.Talentos);
-            
+
             return planilha;
         }
 
@@ -72,7 +72,7 @@ namespace SeiRPGManager.Negocio
 
         public void AtualizarHabilitadorAtletico(HabilitadorAtletico atletico)
         {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/Atletico", atletico.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Fisico/Atletico", "Valor", atletico.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/Atletico/Escalada", atletico.Escalada.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/Atletico/Salto", atletico.Salto.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/Atletico/Natacao", atletico.Natacao.Valor.ToString());
@@ -82,7 +82,7 @@ namespace SeiRPGManager.Negocio
 
         public void AtualizarHabilitadorCombateProximo(HabilitadorCombateProximo combateProximo)
         {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateProximo", combateProximo.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Fisico/CombateProximo", "Valor", combateProximo.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateProximo/CombateDesarmado", combateProximo.CombateDesarmado.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateProximo/Evasao", combateProximo.Evasao.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateProximo/ArmaBrancaCurta", combateProximo.ArmBrancaCurta.Valor.ToString());
@@ -92,7 +92,7 @@ namespace SeiRPGManager.Negocio
 
         public void AtualizarHabilitadorCombateAfastado(HabilitadorCombateAfastado combateAfastado)
         {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateAfastado", combateAfastado.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Fisico/CombateAfastado", "Valor", combateAfastado.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateAfastado/Armamento", combateAfastado.Armamento.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateAfastado/ArmaImpulso", combateAfastado.ArmImpulso.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoLeve", combateAfastado.ArmFogoLeve.Valor.ToString());
@@ -102,7 +102,7 @@ namespace SeiRPGManager.Negocio
 
         public void AtualizarHabilitadorInstrucao(HabilitadorInstrucao instrucao)
         {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Instrucao", instrucao.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Mental/Instrucao", "Valor", instrucao.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Instrucao/Medicina", instrucao.Medicina.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Instrucao/Computacao", instrucao.Computacao.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Instrucao/Conhecimento", instrucao.Conhecimento.Valor.ToString());
@@ -112,7 +112,7 @@ namespace SeiRPGManager.Negocio
 
         public void AtualizarHabilitadorPerspicacia(HabilitadorPerspicacia perspicacia)
         {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Perspicacia", perspicacia.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Mental/Perspicacia", "Valor", perspicacia.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Perspicacia/Investigacao", perspicacia.Investigacao.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Perspicacia/Furtividade", perspicacia.Furtividade.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Perspicacia/Prestidigitacao", perspicacia.Prestidigitacao.Valor.ToString());
@@ -122,7 +122,7 @@ namespace SeiRPGManager.Negocio
 
         public void AtualizarHabilitadorSocial(HabilitadorSocial social)
         {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Social", social.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Mental/Social", "Valor", social.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Social/Empatia", social.Empatia.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Social/Labia", social.Labia.Valor.ToString());
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Social/Malandragem", social.Malandragem.Valor.ToString());
@@ -130,34 +130,15 @@ namespace SeiRPGManager.Negocio
             FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Mental/Social/Performance", social.Performance.Valor.ToString());
         }
 
-        public void AtualizarHabilitadorSobrenatuaral1(HabilitadorSobrenatural sobrenatural)
+        public void AtualizarHabilitadorSobrenatuaral(HabilitadorSobrenatural sobrenatural, int num)
         {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural1", sobrenatural.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural1/Especializacao1", sobrenatural.Slot1.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural1/Especializacao2", sobrenatural.Slot2.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural1/Especializacao3", sobrenatural.Slot3.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural1/Especializacao4", sobrenatural.Slot4.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural1/Especializacao5", sobrenatural.Slot5.Valor.ToString());
-        }
-
-        public void AtualizarHabilitadorSobrenatuaral2(HabilitadorSobrenatural sobrenatural)
-        {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural2", sobrenatural.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural2/Especializacao1", sobrenatural.Slot1.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural2/Especializacao2", sobrenatural.Slot2.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural2/Especializacao3", sobrenatural.Slot3.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural2/Especializacao4", sobrenatural.Slot4.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural2/Especializacao5", sobrenatural.Slot5.Valor.ToString());
-        }
-
-        public void AtualizarHabilitadorSobrenatuaral3(HabilitadorSobrenatural sobrenatural)
-        {
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural3", sobrenatural.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural3/Especializacao1", sobrenatural.Slot1.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural3/Especializacao2", sobrenatural.Slot2.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural3/Especializacao3", sobrenatural.Slot3.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural3/Especializacao4", sobrenatural.Slot4.Valor.ToString());
-            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural3/Especializacao5", sobrenatural.Slot5.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num, "Valor", sobrenatural.Valor.ToString());
+            FuncoesSeiRPG.AlterarAtributoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num, "Nome", sobrenatural.Descricao.ToString());
+            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao1", sobrenatural.Slot1.Valor.ToString());
+            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao2", sobrenatural.Slot2.Valor.ToString());
+            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao3", sobrenatural.Slot3.Valor.ToString());
+            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao4", sobrenatural.Slot4.Valor.ToString());
+            FuncoesSeiRPG.AlterarConteudoXML("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao5", sobrenatural.Slot5.Valor.ToString());
         }
 
         public void AtualizarSaude(SaudePlanilha[] saude)
@@ -185,7 +166,7 @@ namespace SeiRPGManager.Negocio
             {
                 FuncoesSeiRPG.AlterarConteudoXML("Planilha/Talento/Slot" + i, talento[i].Descricao.ToString());
                 FuncoesSeiRPG.AlterarAtributoXML("Planilha/Talento/Slot" + i, "Ajuste", talento[i].Valor.ToString());
-            }            
+            }
         }
 
         public void AtualizarArmas(ArmaPlanilha[] arma)
@@ -231,10 +212,10 @@ namespace SeiRPGManager.Negocio
         {
             AtributosFisicosPlanilha atributo = new AtributosFisicosPlanilha();
 
-            planilha.AtributosFisicos.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("",""));
-            planilha.AtributosFisicos.Forca.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
-            planilha.AtributosFisicos.Destreza.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
-            planilha.AtributosFisicos.Resistencia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            atributo.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Atributo/Fisico", "Prioridade"));
+            atributo.Forca.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Fisico/Forca"));
+            atributo.Destreza.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Fisico/Destreza"));
+            atributo.Resistencia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Fisico/Resistencia"));
 
             return atributo;
         }
@@ -243,10 +224,10 @@ namespace SeiRPGManager.Negocio
         {
             AtributosMentaisPlanilha atributo = new AtributosMentaisPlanilha();
 
-            planilha.AtributosMentais.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("", ""));
-            planilha.AtributosMentais.Intelecto.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
-            planilha.AtributosMentais.Influencia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
-            planilha.AtributosMentais.Percepcao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            atributo.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Atributo/Mental", "Prioridade"));
+            atributo.Intelecto.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Mental/Intelecto"));
+            atributo.Influencia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Mental/Influencia"));
+            atributo.Percepcao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Mental/Percepcao"));
 
             return atributo;
         }
@@ -255,13 +236,125 @@ namespace SeiRPGManager.Negocio
         {
             AtributosSobrenaturaisPlanilha atributo = new AtributosSobrenaturaisPlanilha();
 
-            planilha.AtributosSobrenaturais.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("", ""));
-            planilha.AtributosSobrenaturais.Determinacao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
-            planilha.AtributosSobrenaturais.Intuicao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
-            planilha.AtributosSobrenaturais.Imunidade.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(""));
+            atributo.Prioridade = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Atributo/Sobrenatural", "Prioridade"));
+            atributo.Determinacao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Sobrenatural/Determinacao"));
+            atributo.Intuicao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Sobrenatural/Intuicao"));
+            atributo.Imunidade.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Atributo/Sobrenatural/Imunidade"));
 
             return atributo;
         }
 
+        public HabilitadorAtletico ObterHabilitadorAtletico(Planilha planilha)
+        {
+            HabilitadorAtletico habilitador = new HabilitadorAtletico();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Fisico/Atletico", "Valor"));
+            habilitador.Escalada.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/Atletico/Escalada"));
+            habilitador.Salto.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/Atletico/Salto"));
+            habilitador.Natacao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/Atletico/Natacao"));
+            habilitador.Esporte.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/Atletico/Esporte"));
+            habilitador.Corrida.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/Atletico/Corrida"));
+
+            return habilitador;
+        }
+
+        public HabilitadorCombateProximo ObterHabilitadorCombateProximo(Planilha planilha)
+        {
+            HabilitadorCombateProximo habilitador = new HabilitadorCombateProximo();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Fisico/CombateProximo", "Valor"));
+            habilitador.CombateDesarmado.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateProximo/CombateDesarmado"));
+            habilitador.Evasao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateProximo/Evasao"));
+            habilitador.ArmBrancaCurta.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateProximo/ArmaBrancaCurta"));
+            habilitador.ArmBrancaMedia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateProximo/ArmaBrancaMedia"));
+            habilitador.ArmBrancaLonga.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateProximo/ArmaBrancaLonga"));
+
+            return habilitador;
+        }
+
+        public HabilitadorCombateAfastado ObterHabilitadorCombateProximo(Planilha planilha)
+        {
+            HabilitadorCombateAfastado habilitador = new HabilitadorCombateAfastado();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Fisico/CombateAfastado", "Valor"));
+            habilitador.Armamento.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/Armamento"));
+            habilitador.ArmImpulso.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaImpulso"));
+            habilitador.ArmFogoLeve.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoLeve"));
+            habilitador.ArmFogoMedia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoMedia"));
+            habilitador.ArmFogoPesada.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoPesada"));
+
+            return habilitador;
+        }
+
+        public HabilitadorCombateAfastado ObterHabilitadorCombateProximo(Planilha planilha)
+        {
+            HabilitadorCombateAfastado habilitador = new HabilitadorCombateAfastado();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Fisico/CombateAfastado", "Valor"));
+            habilitador.Armamento.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/Armamento"));
+            habilitador.ArmImpulso.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaImpulso"));
+            habilitador.ArmFogoLeve.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoLeve"));
+            habilitador.ArmFogoMedia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoMedia"));
+            habilitador.ArmFogoPesada.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoPesada"));
+
+            return habilitador;
+        }
+
+        public HabilitadorInstrucao ObterHabilitadorInstrucao(Planilha planilha)
+        {
+            HabilitadorInstrucao habilitador = new HabilitadorInstrucao();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Mental/Instrucao", "Valor"));
+            habilitador.Medicina.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Instrucao/Medicina"));
+            habilitador.Computacao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Instrucao/Computacao"));
+            habilitador.Conhecimento.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Instrucao/Conhecimento"));
+            habilitador.Linguistica.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Instrucao/Linguistica"));
+            habilitador.Ocultismo.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Instrucao/Ocultismo"));
+
+            return habilitador;
+        }
+
+        public HabilitadorSocial ObterHabilitadorSocial(Planilha planilha)
+        {
+            HabilitadorSocial habilitador = new HabilitadorSocial();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Mental/Social", "Valor"));
+            habilitador.Empatia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Social/Empatia"));
+            habilitador.Labia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Social/Labia"));
+            habilitador.Malandragem.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Social/Malandragem"));
+            habilitador.Performance.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Social/Performance"));
+            habilitador.TratoAnimais.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Social/TratoComAnimais"));
+
+            return habilitador;
+        }
+
+        public HabilitadorPerspicacia ObterHabilitadorPerspicacia(Planilha planilha)
+        {
+            HabilitadorPerspicacia habilitador = new HabilitadorPerspicacia();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Mental/Perspicacia", "Valor"));
+            habilitador.Investigacao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Perspicacia/Investigacao"));
+            habilitador.Furtividade.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Perspicacia/Furtividade"));
+            habilitador.Prestidigitacao.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Perspicacia/Prestidigitacao"));
+            habilitador.Reparo.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Perspicacia/Reparo"));
+            habilitador.Subterfugio.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Mental/Perspicacia/Subterfugio"));
+
+            return habilitador;
+        }
+
+        public HabilitadorSobrenatural ObterHabilitadorSobrenatural(Planilha planilha, int num)
+        {
+            HabilitadorSobrenatural habilitador = new HabilitadorSobrenatural();
+
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num, "Valor"));
+            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num, "Nome"));
+            habilitador.Slot1.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao1"));
+            habilitador.Slot2.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao2"));
+            habilitador.Slot3.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao3"));
+            habilitador.Slot4.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao4"));
+            habilitador.Slot5.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao5"));
+
+            return habilitador;
+        }
     }
 }
