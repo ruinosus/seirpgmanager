@@ -143,51 +143,66 @@ namespace SeiRPGManager.Negocio
 
         public void AtualizarSaude(SaudePlanilha[] saude)
         {
-            for (int i = 1; i <= 5; i++)
+            if (saude != null && saude.Length > 0)
             {
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Saude/Slot" + i + "/Estado", saude[i].Estado.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Saude/Slot" + i + "/Penalidade", saude[i].Penalidade.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Saude/Slot" + i + "/Nivel", saude[i].Nivel.ToString());
+                for (int i = 1; i <= 5; i++)
+                {
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Saude/Slot" + i + "/Estado", saude[i].Estado.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Saude/Slot" + i + "/Penalidade", saude[i].Penalidade.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Saude/Slot" + i + "/Nivel", saude[i].Nivel.ToString());
+                }
             }
         }
 
         public void AtualizarPrecedentes(PrecedentePlanilha[] precedente)
         {
-            for (int i = 1; i <= 10; i++)
+            if (precedente != null && precedente.Length > 0)
             {
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Precedente/Slot" + i, precedente[i].Descricao.ToString());
-                FuncoesSeiRPG.AlterarAtributoXML("Planilha/Precedente/Slot" + i, "Custo", precedente[i].Valor.ToString());
+                for (int i = 1; i <= 10; i++)
+                {
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Precedente/Slot" + i, precedente[i].Descricao.ToString());
+                    FuncoesSeiRPG.AlterarAtributoXML("Planilha/Precedente/Slot" + i, "Custo", precedente[i].Valor.ToString());
+                }
             }
         }
 
         public void AtualizarTalentos(TalentoPlanilha[] talento)
         {
-            for (int i = 1; i <= 10; i++)
+            if (talento != null && talento.Length > 0)
             {
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Talento/Slot" + i, talento[i].Descricao.ToString());
-                FuncoesSeiRPG.AlterarAtributoXML("Planilha/Talento/Slot" + i, "Ajuste", talento[i].Valor.ToString());
+                for (int i = 1; i <= 10; i++)
+                {
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Talento/Slot" + i, talento[i].Descricao.ToString());
+                    FuncoesSeiRPG.AlterarAtributoXML("Planilha/Talento/Slot" + i, "Ajuste", talento[i].Valor.ToString());
+                }
             }
         }
 
         public void AtualizarArmas(ArmaPlanilha[] arma)
         {
-            for (int i = 1; i <= 5; i++)
+            if (arma != null && arma.Length > 0)
             {
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Tipo", arma[i].Tipo.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Tamanho", arma[i].Tamanho.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Pente", arma[i].Pente.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Alcance", arma[i].Alcance.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Ajuste", arma[i].Ajuste.ToString());
+                for (int i = 1; i <= 5; i++)
+                {
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Tipo", arma[i].Tipo.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Tamanho", arma[i].Tamanho.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Pente", arma[i].Pente.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Alcance", arma[i].Alcance.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Arma/Slot" + i + "/Ajuste", arma[i].Ajuste.ToString());
+                }
             }
         }
 
         public void AtualizarEquipamentos(EquipamentoPlanilha[] equipamento)
         {
-            for (int i = 1; i <= 5; i++)
+            if (equipamento != null && equipamento.Length > 0)
             {
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Equipamento/Slot" + i + "/Item", equipamento[i].Item.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Equipamento/Slot" + i + "/Tamanho", equipamento[i].Tamanho.ToString());
-                FuncoesSeiRPG.AlterarConteudoXML("Planilha/Equipamento/Slot" + i + "/Quantidade", equipamento[i].Quantidade.ToString());
+                for (int i = 1; i <= 5; i++)
+                {
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Equipamento/Slot" + i + "/Item", equipamento[i].Item.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Equipamento/Slot" + i + "/Tamanho", equipamento[i].Tamanho.ToString());
+                    FuncoesSeiRPG.AlterarConteudoXML("Planilha/Equipamento/Slot" + i + "/Quantidade", equipamento[i].Quantidade.ToString());
+                }
             }
         }
 
@@ -232,7 +247,7 @@ namespace SeiRPGManager.Negocio
             return atributo;
         }
 
-        public AtributosSobrenaturaisPlanilha ObterAtributosFisicos(Planilha planilha)
+        public AtributosSobrenaturaisPlanilha ObterAtributosSobrenaturais(Planilha planilha)
         {
             AtributosSobrenaturaisPlanilha atributo = new AtributosSobrenaturaisPlanilha();
 
@@ -272,21 +287,7 @@ namespace SeiRPGManager.Negocio
             return habilitador;
         }
 
-        public HabilitadorCombateAfastado ObterHabilitadorCombateProximo(Planilha planilha)
-        {
-            HabilitadorCombateAfastado habilitador = new HabilitadorCombateAfastado();
-
-            habilitador.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo("Planilha/Habilitador/Fisico/CombateAfastado", "Valor"));
-            habilitador.Armamento.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/Armamento"));
-            habilitador.ArmImpulso.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaImpulso"));
-            habilitador.ArmFogoLeve.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoLeve"));
-            habilitador.ArmFogoMedia.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoMedia"));
-            habilitador.ArmFogoPesada.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Fisico/CombateAfastado/ArmaFogoPesada"));
-
-            return habilitador;
-        }
-
-        public HabilitadorCombateAfastado ObterHabilitadorCombateProximo(Planilha planilha)
+        public HabilitadorCombateAfastado ObterHabilitadorCombateAfastado(Planilha planilha)
         {
             HabilitadorCombateAfastado habilitador = new HabilitadorCombateAfastado();
 
@@ -355,6 +356,101 @@ namespace SeiRPGManager.Negocio
             habilitador.Slot5.Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Habilitador/Sobrenatural/HabilitadorSobrenatural" + num + "/Especializacao5"));
 
             return habilitador;
+        }
+
+        public SaudePlanilha[] ObterSaude(Planilha planilha)
+        {
+            SaudePlanilha[] saude = new SaudePlanilha[5];
+            
+            for (int i = 1; i <= 5; i++)
+            {
+                saude[i].Nivel = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Saude/Slot"+i +"/Nivel"));
+                saude[i].Estado = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Saude/Slot" + i + "/Estado");
+                saude[i].Penalidade = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Saude/Slot" + i + "/Penalidade"));
+            }
+
+            return saude;
+        }
+
+        public PrecedentePlanilha[] ObterPrecedentes(Planilha planilha)
+        {
+            PrecedentePlanilha[] precedentes = new PrecedentePlanilha[10];
+
+            for (int i = 1; i <= 10; i++)
+            {
+                precedentes[i].Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo(" Planilha/Precedente/Slot" + i,"Custo"));
+                precedentes[i].Descricao = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Precedente/Slot" + i);                
+            }
+
+            return precedentes;
+        }
+
+        public TalentoPlanilha[] ObterTalentos(Planilha planilha)
+        {
+            TalentoPlanilha[] talentos = new TalentoPlanilha[10];
+
+            for (int i = 1; i <= 10; i++)
+            {
+                talentos[i].Valor = Convert.ToInt16(FuncoesSeiRPG.RetornarAtributoConteudo(" Planilha/Talento/Slot" + i, "Ajuste"));
+                talentos[i].Descricao = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Talento/Slot" + i); 
+            }
+
+            return talentos;
+        }
+
+        public ArmaPlanilha[] ObterArmas(Planilha planilha)
+        {
+            ArmaPlanilha[] armas = new ArmaPlanilha[5];
+
+            for (int i = 1; i <= 5; i++)
+            {
+                armas[i].Tipo = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Tipo");
+                armas[i].Tamanho = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Tamanho");
+                armas[i].Pente = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Pente"));
+                armas[i].Alcance = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Alcance"));
+                armas[i].Ajuste = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Ajuste"));
+            }
+
+            return armas;
+        }
+
+        public EquipamentoPlanilha[] ObterEquipamentos(Planilha planilha)
+        {
+            EquipamentoPlanilha[] equipamentos = new EquipamentoPlanilha[5];
+
+            for (int i = 1; i <= 5; i++)
+            {
+                equipamentos[i].Item = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Equipamento/Slot" + i + "/Item");
+                equipamentos[i].Tamanho = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Equipamento/Slot" + i + "/Tamanho"));
+                equipamentos[i].Quantidade = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Equipamento/Slot" + i + "/Quantidade"));
+            }
+
+            return equipamentos;
+        }
+
+        public BarraEnergiaPlanilha ObterBarraEnergia(Planilha planilha)
+        {
+            BarraEnergiaPlanilha energia = new BarraEnergiaPlanilha();
+
+            energia.Vitalidade = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/BarraEnergia/Vitalidade"));
+            energia.EnergiaVital = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/BarraEnergia/EnergiaVital"));
+            energia.Corrupcao = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/BarraEnergia/Corrupcao"));
+
+            return energia;
+        }
+
+        public CapacidadePlanilha ObterCapacidades(Planilha planilha)
+        {
+            CapacidadePlanilha capacidade = new CapacidadePlanilha();
+
+            capacidade.Carga = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Capacidade/DefesaFisica"));
+            capacidade.Carga = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Capacidade/DefesaMental"));
+            capacidade.Carga = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Capacidade/Deslocamento"));
+            capacidade.Carga = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Capacidade/Carga"));
+            capacidade.Carga = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Capacidade/ModificadorIniciativa"));
+            capacidade.Carga = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Capacidade/IndiceProtecao"));
+
+            return capacidade;
         }
     }
 }
