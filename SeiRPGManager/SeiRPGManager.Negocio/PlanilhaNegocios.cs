@@ -404,11 +404,11 @@ namespace SeiRPGManager.Negocio
 
             for (int i = 1; i <= 5; i++)
             {
-                armas[i].Tipo = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Tipo");
-                armas[i].Tamanho = FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Tamanho");
-                armas[i].Pente = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Pente"));
-                armas[i].Alcance = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Alcance"));
-                armas[i].Ajuste = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo(" Planilha/Arma/Slot" + i + "/Ajuste"));
+                armas[i].Tipo = FuncoesSeiRPG.RetornarValorConteudo("Planilha/Arma/Slot" + i + "/Tipo");
+                armas[i].Tamanho = FuncoesSeiRPG.RetornarValorConteudo("Planilha/Arma/Slot" + i + "/Tamanho");
+                armas[i].Pente = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Arma/Slot" + i + "/Pente"));
+                armas[i].Alcance = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Arma/Slot" + i + "/Alcance"));
+                armas[i].Ajuste = Convert.ToInt16(FuncoesSeiRPG.RetornarValorConteudo("Planilha/Arma/Slot" + i + "/Ajuste"));
             }
 
             return armas;
