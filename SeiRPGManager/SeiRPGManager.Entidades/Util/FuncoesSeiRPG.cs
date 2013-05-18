@@ -26,14 +26,7 @@ using System.Xml;
 
         #region Manipulação de XML
 
-        private static string caminhoXML = @"../../../SeiRPGManager.Entidades/Util/Planilha.xml";
-
-        public static XmlDocument CarregarPlanilha()
-        {
-            XmlDocument planilha = new XmlDocument();
-            planilha.Load(caminhoXML);
-            return planilha;
-        }
+        //private static string caminhoXML = @"../../../SeiRPGManager.Entidades/Util/Planilha.xml";
 
         public static XmlDocument CarregarPlanilha(string xmlString)
         {
@@ -42,39 +35,33 @@ using System.Xml;
             return planilha;
         }
 
-        public static void AlterarConteudoXML(string campo, string valor)
+        public static XmlDocument AlterarConteudoXML(XmlDocument planilha, string campo, string valor)
         {
-            XmlDocument planilha = CarregarPlanilha();
-
             //XmlNode no = planilha.SelectSingleNode("Planilha/Atributo/Fisico/Forca");
             //no.InnerText = "8";
 
             XmlNode no = planilha.SelectSingleNode(campo);
             no.InnerText = valor;
-            planilha.Save(caminhoXML);
+            return planilha;
         }
 
-        public static void AlterarAtributoXML(string campo, string atributo, string valor)
+        public static XmlDocument AlterarAtributoXML(XmlDocument planilha, string campo, string atributo, string valor)
         {
-            XmlDocument planilha = CarregarPlanilha();
-
             //XmlNode no = planilha.SelectSingleNode("Planilha/Atributo/Fisico");
             //no.Attributes["Prioridade"].Value = "1";
 
             XmlNode no = planilha.SelectSingleNode(campo);
             no.Attributes[atributo].Value = valor;
-            planilha.Save(caminhoXML);
+            return planilha;
         }
 
-        public static string RetornarValorConteudo(string campo)
-        {
-            XmlDocument planilha = CarregarPlanilha();
+        public static string RetornarValorConteudo(XmlDocument planilha, string campo)
+        {            
             return planilha.SelectSingleNode(campo).InnerText;
         }
 
-        public static string RetornarAtributoConteudo(string campo, string atributo)
+        public static string RetornarAtributoConteudo(XmlDocument planilha, string campo, string atributo)
         {
-            XmlDocument planilha = CarregarPlanilha();
             XmlNode no = planilha.SelectSingleNode(campo);
             return no.Attributes[atributo].Value;
         }
