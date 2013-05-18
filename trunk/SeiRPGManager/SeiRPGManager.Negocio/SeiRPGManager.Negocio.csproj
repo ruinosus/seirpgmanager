@@ -39,14 +39,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendaNegocios.cs" />
+    <Compile Include="AnotacaoNegocios.cs" />
+    <Compile Include="ArmaNegocios.cs" />
+    <Compile Include="CampanhaNegocios.cs" />
+    <Compile Include="CategoriaNegocios.cs" />
+    <Compile Include="EnredoPoolNegocios.cs" />
+    <Compile Include="EntidadeNegocios.cs" />
+    <Compile Include="EquipamentoNegocios.cs" />
+    <Compile Include="EspecializacaoNegocios.cs" />
     <Compile Include="Exceptions\SeiRPGManagerException.cs" />
-    <Compile Include="Exceptions\ViolacaoChaveUnicaException.cs" />
-    <Compile Include="Exceptions\ViolacaoReferenciaException.cs" />
+    <Compile Include="HabilitadorNegocios.cs" />
+    <Compile Include="JogadorNegocios.cs" />
+    <Compile Include="MensagemNegocios.cs" />
+    <Compile Include="NomePoolNegocios.cs" />
+    <Compile Include="OcupacaoNeogicos.cs" />
+    <Compile Include="ParametroNegocios.cs" />
     <Compile Include="PersonagemNegocios.cs" />
+    <Compile Include="PersonalidadeNegocios.cs" />
     <Compile Include="PlanilhaNegocios.cs" />
+    <Compile Include="PrecedenteNegocios.cs" />
+    <Compile Include="PrologoPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RacaNegocios.cs" />
+    <Compile Include="SaudeNegocios.cs" />
+    <Compile Include="SeiRPGManagerNegocios.cs" />
+    <Compile Include="SistemaNegocios.cs" />
+    <Compile Include="TalentoNegocios.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SeiRPGManager.DAL\SeiRPGManager.DAL.csproj">
+      <Project>{e7d7e167-af4c-428c-8d9a-3fe4775f5da5}</Project>
+      <Name>SeiRPGManager.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SeiRPGManager.Entidades\SeiRPGManager.Entidades.csproj">
       <Project>{c588b0aa-e49b-406a-b07a-794618f00730}</Project>
       <Name>SeiRPGManager.Entidades</Name>
