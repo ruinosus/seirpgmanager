@@ -3,7 +3,7 @@
 // Todos os direitos reservados.
 // </copyright>
 // -----------------------------------------------------------------------
-namespace SeiRPGManager.DAL.Repositorio.Interface
+namespace SeiRPGManager.Negocio.Interface
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace SeiRPGManager.DAL.Repositorio.Interface
     /// Todo Atualizar
     /// </summary>
     /// <typeparam name="T">Entidade genérica</typeparam>
-    public interface ISeiRPGManagerDAO<T>
+    public interface ISeiRPGManagerNegocio<T>
         where T : Entidade
     {
         List<T> ObterTodos<T>() where T : Entidade;        

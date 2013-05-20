@@ -2,13 +2,13 @@
 namespace SeiRPGManager.Entidades.Util
 {
     using SeiRPGManager.Entidades.Modelo.ClassesBasicas;
-using SeiRPGManager.Entidades.Modelo.ClassesPlanilha;
-using SeiRPGManager.Entidades.Modelo.Enum;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+    using SeiRPGManager.Entidades.Modelo.ClassesPlanilha;
+    using SeiRPGManager.Entidades.Modelo.Enum;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Xml;
 
     /// <summary>
     /// Classe que fornece vários métodos que serão comuns para toda a aplicação.
@@ -56,7 +56,7 @@ using System.Xml;
         }
 
         public static string RetornarValorConteudo(XmlDocument planilha, string campo)
-        {            
+        {
             return planilha.SelectSingleNode(campo).InnerText;
         }
 
@@ -77,9 +77,9 @@ using System.Xml;
         public static string ParadaDados(int qtdDados, Facilidade facilidade, Ajuste bonus, Ajuste penalidade)
         {
             jogada = new StringBuilder();
-            sucessos = 0;            
+            sucessos = 0;
             noveFora = 0;
-            
+
             int resultadoDado = 0;
             int zeroOuro = 0;
 
@@ -98,7 +98,7 @@ using System.Xml;
 
                     if (resultadoDado <= dificuldade)
                     {
-                        sucessos++;                        
+                        sucessos++;
                     }
 
                     if (resultadoDado == 0)
@@ -132,7 +132,7 @@ using System.Xml;
                         {
                             noveFora++;
                         }
-                        
+
                         FormatarResultadoDado(resultadoDado, i == zeroOuro);
                     }
                 }
@@ -168,7 +168,7 @@ using System.Xml;
         }
 
         private static void VerificarResultado()
-        {            
+        {
             jogada.AppendLine("");
 
 
@@ -195,7 +195,7 @@ using System.Xml;
         {
             Planilha planilha = new Planilha();
             XmlDocument planilhaXMl = new XmlDocument();
-            
+
             planilhaXMl = CarregarPlanilha(personagem.Planilha.ToString());
 
             //planilha.Forca = 1;

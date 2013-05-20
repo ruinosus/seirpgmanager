@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Storytelling.Negocio.Excecoes
+namespace SeiRPGManager.Negocio.Exceptions
 {
     public class SeiRPGManagerException : Exception
     {

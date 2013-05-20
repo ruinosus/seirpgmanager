@@ -50,6 +50,7 @@
     <Compile Include="EspecializacaoNegocios.cs" />
     <Compile Include="Exceptions\SeiRPGManagerException.cs" />
     <Compile Include="HabilitadorNegocios.cs" />
+    <Compile Include="Interface\ISeiRPGManagerNegocio.cs" />
     <Compile Include="JogadorNegocios.cs" />
     <Compile Include="MensagemNegocios.cs" />
     <Compile Include="NomePoolNegocios.cs" />

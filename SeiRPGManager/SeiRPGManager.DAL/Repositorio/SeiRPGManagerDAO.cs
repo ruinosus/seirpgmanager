@@ -105,14 +105,14 @@ namespace SeiRPGManager.DAL.Repositorio
         /// 
         /// </summary>
         /// <param name="ids"></param>
-        public void Excluir(params long[] ids)
+        public void Excluir<T>(params long[] ids) where T : Entidade
         {
             if (ids == null || ids.Count() == 0)
                 throw new ArgumentException("Impossível excluir uma entidade nula");
 
             using (var contexto = _contexto)
             {
-                //T entityToDelete = contexto.Set<T>().Where(ent => ent.Id == 1).Single();
+                T entityToDelete = contexto.Set<T>().Where(ent => ent.Id == 1).Single();
                 T entidade;
 
                 foreach (long id in ids)
