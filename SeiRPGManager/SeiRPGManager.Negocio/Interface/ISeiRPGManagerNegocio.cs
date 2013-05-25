@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ISeiRPGManagerDAO.cs" company="Playware">
+// <copyright file="ISeiRPGManagerNegocio.cs" company="Playware">
 // Todos os direitos reservados.
 // </copyright>
 // -----------------------------------------------------------------------
