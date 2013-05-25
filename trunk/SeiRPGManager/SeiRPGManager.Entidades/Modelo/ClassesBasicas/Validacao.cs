@@ -59,7 +59,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
             if ((string.IsNullOrWhiteSpace(valor) && (limiteMin > 0)) || (!string.IsNullOrWhiteSpace(valor) && ((valor.Length < limiteMin) || (valor.Length > limiteMax))))
             {
                 retornoValidacao.AddMensagem(String.Format(
-                    "MENSAGEM VALIDACAO .MsgCampoIntervaloTexto", String.Format(tokenNomeCampo), limiteMin, limiteMax));
+                    "{0} deve ter entre {1} e {2} caracteres", String.Format(tokenNomeCampo), limiteMin, limiteMax));
             }
         }
 
@@ -84,7 +84,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
         {
             if (requerido && propriedade == null)
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgCampoObrigatorio", tokenNomePropriedade));
+                retornoValidacao.AddMensagem(String.Format("É necessário informar o campo {0}", tokenNomePropriedade));
             }
 
             if (propriedade != null)
@@ -108,7 +108,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
         {
             if (propriedade == null)
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgCampoObrigatorio", tokenNomePropriedade));
+                retornoValidacao.AddMensagem(String.Format("É necessário informar o campo {0}", tokenNomePropriedade));
             }
         }
 
@@ -129,7 +129,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
             string valorAux = Convert.ToString(valor, CultureInfo.CurrentCulture);
             if ((valorAux.Length < limiteMin) || (valorAux.Length > limiteMax))
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgCampoIntervaloTexto", tokenNomeCampo, limiteMin, limiteMax));
+                retornoValidacao.AddMensagem(String.Format("{0} deve ter valor entre {1} e {2}", tokenNomeCampo, limiteMin, limiteMax));
             }
         }
 
@@ -149,7 +149,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
         {
             if ((valor < limiteMin) || (valor > limiteMax))
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgCampoIntervalo", tokenNomeCampo, limiteMin, limiteMax));
+                retornoValidacao.AddMensagem(String.Format("{0} deve ter valor entre {1} e {2}", tokenNomeCampo, limiteMin, limiteMax));
             }
         }
 
@@ -169,11 +169,11 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
         {
             if (requerido && valor.Length > limite)
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgMenorOuIgual", tokenNomeCampo, limite));
+                retornoValidacao.AddMensagem(String.Format("{0} deve ser menor ou igual a {1}", tokenNomeCampo, limite));
             }
             if (valor != null && requerido == false && valor.Length > limite)
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgMenorOuIgual", tokenNomeCampo, limite));
+                retornoValidacao.AddMensagem(String.Format("{0} deve ser menor ou igual a {1}", tokenNomeCampo, limite));
             }
         }
 
@@ -194,7 +194,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
 
             if (!string.IsNullOrEmpty(valorConvert) && (valorConvert.Length != limite))
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgValorIgual", tokenNomeCampo, limite));
+                retornoValidacao.AddMensagem(String.Format("{0} deve ser igual a {1}", tokenNomeCampo, limite));
             }
         }
 
@@ -215,7 +215,7 @@ namespace SeiRPGManager.Entidades.Modelo.ClassesBasicas
         {
             if ((lista == null) || (lista.Count < limiteMin))
             {
-                retornoValidacao.AddMensagem(String.Format("MENSAGEM VALIDACAO MsgInformarMinimo", tokenNomeCampo, limiteMin));
+                retornoValidacao.AddMensagem(String.Format("{0} deve-se informar pelo menos {1} {2}", tokenNomeCampo, limiteMin));
             }
         }
 
