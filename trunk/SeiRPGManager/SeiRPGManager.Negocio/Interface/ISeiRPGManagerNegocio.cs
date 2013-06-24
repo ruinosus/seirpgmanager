@@ -25,8 +25,8 @@ namespace SeiRPGManager.Negocio.Interface
         void Excluir<T>(T entidade) where T : Entidade;
         void Excluir<T>(params long[] ids) where T : Entidade;
         void Anexar<T>(T entidade) where T : Entidade;
-        IEnumerable<T> Pesquisar<T>() where T : Entidade;
-        IEnumerable<T> Pesquisar<T>(Func<T, bool> filtro) where T : Entidade;
+        IQueryable<T> Pesquisar<T>() where T : Entidade;
+        IQueryable<T> Pesquisar<T>(Func<T, bool> filtro) where T : Entidade;
         T ObterUm<T>(Func<T, bool> filtro) where T : Entidade;
         T ObterPrimeiro<T>(Func<T, bool> filtro) where T : Entidade;        
     }

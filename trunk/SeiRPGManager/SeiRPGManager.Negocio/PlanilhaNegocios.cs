@@ -9,7 +9,7 @@ using System.Xml;
 
 namespace SeiRPGManager.Negocio
 {
-    public class PlanilhaNegocios
+    public class PlanilhaNegocio
     {
         public string AtualizarPlanilha(XmlDocument planilhaXml, Planilha planilha)
         {

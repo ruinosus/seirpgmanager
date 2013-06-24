@@ -43,7 +43,7 @@ namespace SeiRPGManager.Teste
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PlanilhaNegocios neg = new PlanilhaNegocios();
+            PlanilhaNegocio neg = new PlanilhaNegocio();
 
             XmlDocument p = new XmlDocument();
 

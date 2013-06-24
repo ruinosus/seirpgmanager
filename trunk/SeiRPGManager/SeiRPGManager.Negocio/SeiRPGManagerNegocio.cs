@@ -48,12 +48,12 @@ namespace SeiRPGManager.Negocio
             this.seiRPGManagerNegocio.Anexar<T>(entidade);
         }
 
-        public IEnumerable<T> Pesquisar<T>() where T : Entidade
+        public IQueryable<T> Pesquisar<T>() where T : Entidade
         {
             return this.seiRPGManagerNegocio.Pesquisar<T>();
         }
 
-        public IEnumerable<T> Pesquisar<T>(Func<T, bool> filtro) where T : Entidade
+        public IQueryable<T> Pesquisar<T>(Func<T, bool> filtro) where T : Entidade
         {
             return this.seiRPGManagerNegocio.Pesquisar<T>(filtro);
         }
